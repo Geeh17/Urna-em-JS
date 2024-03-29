@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Urna Eletrônica</h1>
+        </div>
+        <div class="voting-container">
+            <form id="votingForm">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="prefeito">Vote para Prefeito:</label>
+                <select id="prefeito" name="prefeito" required>
+                    <option value="hebert">Hebert - número 90</option>
+                    <option value="ribeiro">Ribeiro - número 95</option>
+                </select>
+                <label for="vereador">Vote para Vereador:</label>
+                <select id="vereador" name="vereador" required>
+                    <option value="barone">Barone - número 90000</option>
+                    <option value="bidu">Bidu - número 90999</option>
+                    <option value="monteiro">Monteiro - número 95000</option>
+                    <option value="joaoFera">João Fera - número 95999</option>
+                </select>
+                <button type="submit">Confirmar Voto</button>
+            </form>
+        </div>
+        <div class="charts">
+            <div class="chart-container">
+                <canvas id="chartPrefeito"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="chartVereador"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
